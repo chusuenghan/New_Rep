@@ -1,9 +1,9 @@
-package pnu.user.Service.impl;
+package pnu.user.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import pnu.user.Service.UserService;
+import pnu.user.service.UserService;
 import pnu.user.dao.UserDAO;
 import pnu.user.vo.UserVO;
 
@@ -21,5 +21,10 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public int insertUser(UserVO user){
 		return userDAO.insertUser(user);
+	}
+
+	@Override
+	public UserVO selectUserInfo(String userId) {
+		return userDAO.selectUserInfo(userId);
 	}
 }

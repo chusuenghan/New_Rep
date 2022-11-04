@@ -6,4 +6,6 @@ public interface UserDAO {
 	public String selectPwd(String id);
 	
 	public int insertUser(UserVO user);
+	
+	public UserVO selectUserInfo(String userId);
 }

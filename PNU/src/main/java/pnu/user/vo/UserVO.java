@@ -5,11 +5,18 @@ public class UserVO {
 	private String pwd;
 	private String name;
 	private String deptCd;
+	private String deptNm;
 	private String job;
+	
 	private String phone;
 	private String email;
 	
-	
+	public String getDeptNm() {
+		return deptNm;
+	}
+	public void setDeptNm(String deptNm) {
+		this.deptNm = deptNm;
+	}
 	public String getUserId() {
 		return userId;
 	}
