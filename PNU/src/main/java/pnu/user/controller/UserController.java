@@ -23,10 +23,9 @@ public class UserController {
 	DeptService deptService;
 	
 	@RequestMapping(value="/signUpPage.do", method = RequestMethod.GET)
-	public ModelAndView signUpPage() throws Exception {
+	public ModelAndView signUpPage() {
 		ModelAndView mav = new ModelAndView("user/signUp.jsp");
 		List<DeptVO> dept = deptService.selectDeptList();
-		
 		mav.addObject("dept", dept);
 		
 		return mav;

@@ -12,10 +12,10 @@ import pnu.dept.vo.DeptVO;
 @Service
 public class DeptServiceImpl implements DeptService{
 	@Autowired
-	private DeptDAO deptDAO;
+	DeptDAO deptDAO;
 	
 	@Override
-	public List<DeptVO> selectDeptList() throws Exception{
+	public List<DeptVO> selectDeptList(){
 		return deptDAO.selectDeptList();
 	}
 }
