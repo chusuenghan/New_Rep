@@ -2,6 +2,8 @@ package pnu.user.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -38,4 +40,30 @@ public class UserController {
 		return "redirect:/loginPage.do";
 	}
 	
+	@RequestMapping(value="/pwdConfirmPage.do", method = RequestMethod.GET)
+	public String pwdConfirmPage() {
+		return "user/pwdConfirm.jsp";
+	}
+	
+	@RequestMapping(value="/userUpdatePage.do", method = RequestMethod.POST)
+	public ModelAndView userUpdatePage(@ModelAttribute UserVO user) {
+		if(userService.selectPwd(user.getUserId(), user.getPwd())) {
+			ModelAndView mav = new ModelAndView("user/userUpdate.jsp");
+			List<DeptVO> dept = deptService.selectDeptList();
+			mav.addObject("dept", dept);
+			
+			return mav;
+		} else {
+			ModelAndView mav = new ModelAndView("main.jsp");
+			return mav;
+		}
+	}
+	
+	@RequestMapping(value="/userUpdate.do", method = RequestMethod.POST)
+	public String updateUser(HttpSession session, @ModelAttribute UserVO user) {
+		userService.updateUser(user);
+		userService.setSession(session, user.getUserId());
+		return "main.jsp";
+	}
+
 }
