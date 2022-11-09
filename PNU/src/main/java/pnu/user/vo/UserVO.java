@@ -7,9 +7,9 @@ public class UserVO {
 	private String deptCd;
 	private String deptNm;
 	private String job;
-	
 	private String phone;
 	private String email;
+	private String used;
 	
 	public String getDeptNm() {
 		return deptNm;
@@ -58,6 +58,12 @@ public class UserVO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getUsed() {
+		return used;
+	}
+	public void setUsed(String used) {
+		this.used = used;
 	}
 	
 	
