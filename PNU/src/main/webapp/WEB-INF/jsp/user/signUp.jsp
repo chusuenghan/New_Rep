@@ -61,38 +61,25 @@
 		<button type="button" id="okBtn">확인</button>
 	</form>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/jqery-3.6.1.min.js"></script> --%>
+
 <script>
 	
 	window.onload = function() {
 		
-		$("#okBtn").click(function(){
-			var pwd = $("#pwdInput1").val();
-			var pwdCheck = $("#pwdInput2").val();
+		var okBtn = document.getElementById("okBtn");
+		
+		okBtn.onclick = function() {
+			var pwd1 = document.getElementById("pwdInput1").value;
+			var pwd2 = document.getElementById("pwdInput2").value;
 			
-			if(pwd == pwdCheck){
-				$("#signUpForm").submit();
-			}
-			else{
+			console.log(pwd1, pwd2);
+			
+			if(pwd1 == pwd2) {
+				document.getElementById("signUpForm").submit();
+			} else {
 				alert("비밀번호가 일치하지 않습니다.");
 			}
-		});
-		
-// 		var okBtn = document.getElementById("okBtn");
-
-// 		okBtn.onclick = function() {
-// 			var pwd1 = document.getElementById("pwdInput1").value;
-// 			var pwd2 = document.getElementById("pwdInput2").value;
-			
-// 			console.log(pwd1, pwd2);
-			
-// 			if(pwd1 == pwd2) {
-// 				document.getElementById("signUpForm").submit();
-// 			} else {
-// 				alert("비밀번호가 일치하지 않습니다.");
-// 			}
-// 		}
+		}
 	}
 	
 </script>
