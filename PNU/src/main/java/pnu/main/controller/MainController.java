@@ -18,6 +18,11 @@ public class MainController {
 	@Autowired
 	UserService userService;
 	
+	@RequestMapping(value="/busroute.do", method = RequestMethod.GET)
+	public String busRoute() {
+		return "busr.jsp";
+	}
+	
 	@RequestMapping(value="/main.do", method = RequestMethod.GET)
 	public String mainPage() {
 		return "main.jsp";

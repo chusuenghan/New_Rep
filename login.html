@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    
+    <style>
+        @media screen and (max-width: 767px){
+            #wrapper{
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+            
+            div{
+                padding: 15px;
+            }
+        }
+       
+        @media screen and (min-width: 768px) and (max-width: 957px){
+            #wrapper{
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+            }
+            
+            div{
+                padding: 15px;
+            }
+        }
+
+        @media screen and (min-width: 957px){
+            #wrapper{
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+            }
+            
+            div{
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrapper">
+        <form  action = "/login_process" method="post">
+            <div>
+                <label for = "userName">아이디: <input id = "userName" type = "text" name = "userName"></label>
+            </div>
+
+            <div>
+               <label for = "password">비밀번호: <input id = "password" type = "password" name = "password"></label>
+            </div>
+
+            <div>
+                <input type = "submit" value = "로그인" onclick = "login();">
+            </div>
+        </form>
+        <form action="/create" method="get">
+            <button type="submit">회원 가입</button>
+        </form>
+        <a href="javascript:window.history.back();"><button type="button">이전</button></a>
+    </div>
+</body>
+</html>

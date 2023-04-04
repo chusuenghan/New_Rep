@@ -1,0 +1,233 @@
+@media (max-width:999px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        margin: 0 auto;
+        width: 100%;
+        height: 500px;
+        background-image: url('mainslide_01.jpg');
+        background-size: 100% 500px;
+        color: white;
+    }
+    header>#upimg{
+        position: fixed;
+        left: 0; top: 0; right: 0;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+        z-index: 100;
+    }
+    div>#img{
+        width: 300px;
+        height: 50px;
+        background-color: rgba(0, 255, 255, 1);
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 20px;
+        
+    }
+    #menu{
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+    }
+    #login{
+        margin-top: 5px;
+        height: 30px;
+        text-align: right;
+        display: none;
+    }
+    .item{
+        display: inline-block;
+        float: right;
+        margin: 0 auto;
+        width: 150px;
+        height: 50px;
+        text-align: right;
+        display: none;
+    }
+    #top{
+        width: 100%;
+        height: 50px;
+        background-color: rgb(172, 172, 172);
+        overflow: hidden;
+        text-align: center;
+        font-size: small;
+    }
+    .side{
+        display: inline-block;
+        margin: 0 auto;
+        color: white;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        border-right: 1px solid rgba(255, 255, 255, 1);
+        overflow: hidden;
+        line-height: 40px;
+        margin-right: 10px;
+        
+    }
+    .side2{
+        margin-top: -5px;
+        border-right: 1px solid rgb(172, 172, 172);
+    }
+    #wone{
+        color: black;
+        background-color: white;
+        display: none;
+    }
+    #name{
+        width: 800px;
+        height: 150px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 80px;
+    }
+    h1{
+        margin: 0 auto;
+        width: 330px;
+        height: 80px;
+        overflow: visible;
+        display: inline-block;
+    }
+    #back{
+        
+        width: 100%;
+        height: 1350px;
+        
+    }
+    #mainsection{
+        width: 800px;
+        height: 1350px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .mainitem{
+        margin: 0 auto;
+        text-align: center;
+        width: 300px;
+        height: 450px;
+        display: block;
+        position: relative;
+    }
+    .mainimg{
+        position: absolute;
+        left:0; right:0; top: 0px;
+        z-index: 10;
+    }
+    /*.right{
+        margin-right: 50px;
+    }*/
+    .mainitem>span{
+        position: absolute;
+        left: 0; right: 0; bottom: 10px;
+    }
+    .view{
+        width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        height: 2px;
+        background-color: black;
+        border: 0;
+    }
+    #secsection{
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid gray;
+        border-left: 0px;
+        border-right: 0px;
+    }
+    #call{
+        width: 650px;
+        height: 300px;
+        display: inline-block;
+        position: relative;
+        float: left;
+        display: none;
+    }
+    #calbox{
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        left: 0; right: 0; top: 75px;
+        background-color: green;
+    }
+    .mcbox{
+        width: 200px;
+        height: 75px;
+        margin: 0 auto;
+        border: 3px solid white;
+        color: white;
+        text-align: center;
+        float: left;
+        line-height: 75px;
+        margin: 32px;
+    }
+    #phone{
+        float: right;
+    }
+    .mcbox>img{
+        vertical-align: -7px;
+    }
+    #sns{
+        width: 800px;
+        height: 300px;
+        
+        margin: 0 auto;
+        position: relative;
+    }
+    #snsbox{
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        margin: 0 auto;
+        left: 0; right: 0; top: 75px;
+        padding-left: 15px;
+    }
+    .ellipsis{
+        width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+        
+    }
+    footer{
+        width: 100%;
+        height: 240px;
+        margin: 0 auto;
+    }
+    #fooinfo{
+        width: 350px;
+        height: 120px;
+        display: block;
+        margin: 0 auto;
+    }
+    #rule{
+        padding: 5px 0;
+    }
+    #info > span, #info > div{
+        font-size: 12px;
+        display: block;
+    }
+    #info > .slash{
+        display: none;
+    }
+    #ico{
+        width: 350px;
+        height: 100px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    #ico > img{
+        padding: 20px;
+    }
+}
